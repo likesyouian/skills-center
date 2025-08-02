@@ -40,10 +40,12 @@
             overflow-x: hidden;
         }
         
+        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
         
+        /* Typography improvements */
         h1, h2, h3, h4 {
             font-weight: 600;
             line-height: 1.3;
@@ -56,6 +58,7 @@
             font-weight: 400;
         }
         
+        /* Layout */
         .container {
             width: 100%;
             max-width: 1200px;
@@ -63,7 +66,7 @@
             padding: 0 1.5rem;
         }
         
-        /* Header Styles */
+        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -105,7 +108,6 @@
         
         .nav-links li {
             margin-left: 2rem;
-            position: relative;
         }
         
         .nav-links a {
@@ -116,9 +118,6 @@
             position: relative;
             transition: var(--transition);
             padding: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
         }
         
         .nav-links a::after {
@@ -139,51 +138,6 @@
         
         .nav-links a:hover {
             color: var(--primary);
-        }
-        
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 200px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            padding: 0.5rem 0;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 1000;
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .dropdown-menu li {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .dropdown-menu a {
-            padding: 0.8rem 1.5rem;
-            display: block;
-            color: var(--dark);
-            font-size: 0.9rem;
-        }
-        
-        .dropdown-menu a:hover {
-            background: rgba(61, 105, 79, 0.1);
-        }
-        
-        .dropdown > a::after {
-            display: none;
         }
         
         .menu-toggle {
@@ -231,6 +185,7 @@
             transform: translateY(-3px);
         }
         
+        /* Learn More Button */
         .learn-more {
             display: inline-flex;
             align-items: center;
@@ -262,10 +217,11 @@
         /* Course-specific button colors */
         .computer-card .learn-more {
             background: var(--primary);
+            transform: perspective(1);
         }
         
         .cosmetology-card .learn-more {
-            background: var(--cosmo-color);
+            background: var(--);
         }
         
         .auto-card .learn-more {
@@ -306,7 +262,7 @@
             color: rgba(255, 255, 255, 0.9);
         }
         
-        /* Section Styles */
+        /* Courses Section */
         .section {
             padding: 5rem 0;
         }
@@ -345,43 +301,23 @@
         }
         
         .computer-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/computer-lab.jpg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/ian leda.png');
         }
         
         .cosmetology-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/cosmetology-class.jpg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/ian leda.png');
         }
         
         .auto-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/auto-shop.jpg');
+             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/ian leda.png');
         }
         
         .welding-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/welding-workshop.jpg');
+             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/ian leda.png');
         }
         
         .catering-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/catering-class.jpg');
-        }
-        
-        .about-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/about-hero.jpg');
-        }
-        
-        .mission-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/mission-hero.jpg');
-        }
-        
-        .team-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/team-hero.jpg');
-        }
-        
-        .board-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/board-hero.jpg');
-        }
-        
-        .gallery-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/gallery-hero.jpg');
+             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/ian leda.png');
         }
         
         .course-hero h1 {
@@ -589,76 +525,6 @@
             transform: scale(1.1);
         }
         
-        /* Team Section */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .team-member {
-            text-align: center;
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .team-member img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-        
-        .team-member h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .team-member p.position {
-            font-weight: 500;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Board Section */
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .board-member {
-            text-align: center;
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(148, 30, 30, 0.05);
-        }
-        
-        .board-member img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-        
-        .board-member h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .board-member p.position {
-            font-weight: 500;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-        
         /* Back Button */
         .back-btn {
             display: inline-flex;
@@ -821,24 +687,12 @@
                 transform: translateY(0);
             }
             
-            .dropdown-menu {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                box-shadow: none;
-                padding: 0;
-                margin-top: 0.5rem;
-            }
-            
             .nav-links li {
                 margin: 0.5rem 0;
-                width: 100%;
-                text-align: center;
             }
             
             .nav-links a {
                 padding: 0.8rem 1rem;
-                justify-content: center;
             }
             
             .hero h1 {
@@ -909,20 +763,11 @@
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" onclick="showPage('about')">About <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" onclick="showPage('mission')">Our Mission</a></li>
-                        <li><a href="#" onclick="showPage('team')">Our Team</a></li>
-                        <li><a href="#" onclick="showPage('board')">Our Board</a></li>
-                    </ul>
-                </li>
                 <li><a href="#" onclick="showPage('computer')">Computer</a></li>
                 <li><a href="#" onclick="showPage('cosmetology')">Cosmetology</a></li>
                 <li><a href="#" onclick="showPage('auto')">Auto Mechanic</a></li>
                 <li><a href="#" onclick="showPage('welding')">Welding</a></li>
                 <li><a href="#" onclick="showPage('catering')">Catering</a></li>
-                <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
             </ul>
         </div>
     </header>
@@ -956,7 +801,7 @@
                             <li>Hands-on hardware training</li>
                             <li>Software development basics</li>
                             <li>Networking fundamentals</li>
-                            <li>Cybersecurity principles</li>
+                          
                         </ul>
                         <a href="#" class="learn-more" onclick="showPage('computer')">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -969,7 +814,7 @@
                             <li>Modern beauty techniques</li>
                             <li>Salon management</li>
                             <li>Client relations</li>
-                            <li>Makeup artistry</li>
+                            
                         </ul>
                         <a href="#" class="learn-more" onclick="showPage('cosmetology')">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -982,7 +827,7 @@
                             <li>Engine repair</li>
                             <li>Electrical systems</li>
                             <li>Diagnostic tools</li>
-                            <li>Transmission systems</li>
+                    
                         </ul>
                         <a href="#" class="learn-more" onclick="showPage('auto')">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -995,7 +840,7 @@
                             <li>Multiple welding methods</li>
                             <li>Metal fabrication</li>
                             <li>Safety protocols</li>
-                            <li>Blueprint reading</li>
+                            
                         </ul>
                         <a href="#" class="learn-more" onclick="showPage('welding')">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -1008,286 +853,11 @@
                             <li>Professional kitchen training</li>
                             <li>Menu planning</li>
                             <li>Food safety</li>
-                            <li>Event catering</li>
+                         
                         </ul>
                         <a href="#" class="learn-more" onclick="showPage('catering')">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-    
-    <!-- About Page -->
-    <div class="page" id="about">
-        <section class="course-hero about-hero">
-            <div class="container">
-                <h1 class="fade-in">About MITS Vocational</h1>
-                <p class="fade-in delay-1">Transforming lives through skills development and empowerment</p>
-            </div>
-        </section>
-        
-        <section class="section">
-            <div class="container">
-                <div class="course-details">
-                    <div class="detail-card fade-in">
-                        <h2>Our Story</h2>
-                        <p>Founded in 2005, MITS Vocational Training Center has been at the forefront of vocational education in Liberia, providing quality training to thousands of students.</p>
-                        <p>What began as a small initiative has grown into a leading vocational institution recognized for its practical approach to skills development.</p>
-                        <a href="#" class="learn-more" onclick="showPage('mission')">Our Mission <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="detail-card fade-in delay-1">
-                        <h2>Our Impact</h2>
-                        <ul>
-                            <li>5,000+ graduates since inception</li>
-                            <li>85% employment rate for graduates</li>
-                            <li>15 vocational programs offered</li>
-                            <li>50+ industry partnerships</li>
-                            <li>10 community outreach programs annually</li>
-                        </ul>
-                        <a href="#" class="learn-more" onclick="showPage('team')">Meet Our Team <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    <!-- Mission Page -->
-    <div class="page" id="mission">
-        <section class="course-hero mission-hero">
-            <div class="container">
-                <h1 class="fade-in">Our Mission</h1>
-                <p class="fade-in delay-1">Guiding principles that drive our institution forward</p>
-            </div>
-        </section>
-        
-        <section class="section">
-            <div class="container">
-                <div class="detail-card">
-                    <h2>Empowering Through Education</h2>
-                    <p>Our mission is to provide accessible, quality vocational training that equips students with practical skills for sustainable employment and entrepreneurship.</p>
-                    
-                    <h3>Core Values</h3>
-                    <ul>
-                        <li><strong>Excellence:</strong> Maintaining high standards in all our programs</li>
-                        <li><strong>Empowerment:</strong> Creating opportunities for self-sufficiency</li>
-                        <li><strong>Innovation:</strong> Continuously improving our curriculum</li>
-                        <li><strong>Community:</strong> Serving the needs of our society</li>
-                        <li><strong>Integrity:</strong> Upholding ethical practices in all we do</li>
-                    </ul>
-                    
-                    <h3>Our Vision</h3>
-                    <p>To be the leading vocational training center in Liberia, recognized for producing highly skilled professionals who contribute to national development.</p>
-                    
-                    <a href="#" class="back-btn" onclick="showPage('about')"><i class="fas fa-arrow-left"></i> Back to About</a>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    <!-- Team Page -->
-    <div class="page" id="team">
-        <section class="course-hero team-hero">
-            <div class="container">
-                <h1 class="fade-in">Our Team</h1>
-                <p class="fade-in delay-1">Dedicated professionals committed to your success</p>
-            </div>
-        </section>
-        
-        <section class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Meet Our Dedicated Staff</h2>
-                    <p>Our experienced instructors and support staff are passionate about vocational education</p>
-                </div>
-                
-                <div class="team-grid">
-                    <div class="team-member fade-in">
-                        <img src="images/moses.PNG" alt="Director">
-                        <h3>Moses Okoth</h3>
-                        <p class="position">Director</p>
-                        <p>20+ years in vocational education</p>
-                    </div>
-                    
-                    <div class="team-member fade-in delay-1">
-                        <img src="images/charls.PNG" alt="Auto Mechanic">
-                        <h3>Charles Ndonyi</h3>
-                        <p class="position">Auto Mechanic</p>
-                        <p>Curriculum development specialist</p>
-                    </div>
-                    
-                    <div class="team-member fade-in delay-2">
-                        <img src="images/kemboy.PNG" alt="Computer Instructor">
-                        <h3>Kipkemboi Obadiah</h3>
-                        <p class="position">Computer Tearcher</p>
-                        <p>5 years industry experience</p>
-                    </div>
-                    
-                    <div class="team-member fade-in">
-                        <img src="images/roses.PNG" alt="Cosmetology Instructor">
-                        <h3>Rose Wanjiru</h3>
-                        <p class="position">Cosmetology Instructor</p>
-                        <p>Master stylist and salon owner</p>
-                    </div>
-
-                     <div class="team-member fade-in">
-                        <img src="images/vince.PNG" alt="Cosmetology Instructor">
-                        <h3>Vincent Kipkemboi</h3>
-                        <p class="position">Welding Instructor</p>
-                        <p></p>
-                    </div>
-
-                           <div class="team-member fade-in">
-                        <img src="images/edwin.PNG" alt="Catering Instructor">
-                        <h3>Edwin Kiptoo</h3>
-                        <p class="position">Catering Instructor</p>
-                        <p></p>
-                    </div>
-
-
-                        <div class="team-member fade-in">
-                        <img src="images/ma.PNG" alt="Catering Instructor">
-                        <h3>Magdalene Wairimu</h3>
-                        <p class="position">Catering Instructor</p>
-                        <p></p>
-                    </div>
-
-                </div>
-                
-                <a href="#" class="back-btn" onclick="showPage('about')"><i class="fas fa-arrow-left"></i> Back to About</a>
-            </div>
-        </section>
-    </div>
-    
-    <!-- Board Page -->
-    <div class="page" id="board">
-        <section class="course-hero board-hero">
-            <div class="container">
-                <h1 class="fade-in">Our Board</h1>
-                <p class="fade-in delay-1">Guiding our institution towards excellence</p>
-            </div>
-        </section>
-        
-        <section class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Board of Directors</h2>
-                    <p>Experienced leaders providing strategic direction</p>
-                </div>
-                
-                <div class="board-grid">
-                    <div class="board-member fade-in">
-                        <img src="images/brad.PNG" alt="Board Chairperson">
-                        <h3>Brad Voss</h3>
-                        <p class="position">Executive Director</p>
-                        <p>Fort Worth, Texas</p>
-                    </div>
-                    
-                    <div class="board-member fade-in delay-1">
-                        <img src="images/lauren.PNG" alt="Vice Chairperson">
-                        <h3>Lauren Fieldhouse</h3>
-                        <p class="position">Director of Strategic Engagement</p>
-                        <p>Costa Mesa, California</p>
-                    </div>
-                    
-                    <div class="board-member fade-in delay-2">
-                        <img src="images/stephen.PNG" alt="Treasurer">
-                        <h3>Stephen Bailey</h3>
-                        <p class="position">Director of Strategic Growth</p>
-                        <p>Fort Worth, Texas</p>
-                    </div>
-                    
-                    <div class="board-member fade-in">
-                        <img src="images/ste.PNG" alt="Secretary">
-                        <h3>Stephanie Casco</h3>
-                        <p class="position">Administrative Coordinator</p>
-                        <p>Fort Worth, Texas</p>
-                    </div>
-
-                      <div class="board-member fade-in">
-                        <img src="images/90.PNG" alt="Secretary">
-                        <h3>Ericka Maple</h3>
-                        <p class="position">Director of Finance</p>
-                        <p>Nashville, Tennessee</p>
-                    </div>
-                </div>
-                
-                <a href="#" class="back-btn" onclick="showPage('about')"><i class="fas fa-arrow-left"></i> Back to About</a>
-            </div>
-        </section>
-    </div>
-    
-    <!-- Gallery Page -->
-    <div class="page" id="gallery">
-        <section class="course-hero gallery-hero">
-            <div class="container">
-                <h1 class="fade-in">Gallery</h1>
-                <p class="fade-in delay-1">A glimpse into life at MITS Vocational</p>
-            </div>
-        </section>
-        
-        <section class="section">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our Campus Life</h2>
-                    <p>Explore moments from our classrooms, workshops, and events</p>
-                </div>
-                
-                <div class="gallery-section fade-in">
-                    <h2 class="gallery-title">Training Facilities</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="images/computer-lab.jpg" alt="Computer Lab">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/auto-shop.jpg" alt="Auto Mechanic Workshop">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/welding-workshop.jpg" alt="Welding Workshop">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/catering-class.jpg" alt="Catering Kitchen">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="gallery-section fade-in delay-1">
-                    <h2 class="gallery-title">Student Activities</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="images/students-working.jpg" alt="Students working together">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/graduation.jpg" alt="Graduation ceremony">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/field-trip.jpg" alt="Industry field trip">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/career-fair.jpg" alt="Career fair">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="gallery-section fade-in delay-2">
-                    <h2 class="gallery-title">Community Engagement</h2>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="images/community-service.jpg" alt="Community service project">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/industry-partners.jpg" alt="Meeting with industry partners">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/open-house.jpg" alt="Open house event">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/awards.jpg" alt="Student awards">
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="#" class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back to Home</a>
             </div>
         </section>
     </div>
@@ -1318,8 +888,8 @@
                             <li>IT support and customer service skills</li>
                         </ul>
                         
-                        <h3>Program Duration</h3>
-                        <p>12 months (6 months classroom training + 6 months internship)</p>
+            
+                        
                     </div>
                     
                     <div class="detail-card computer-card fade-in delay-1">
@@ -1334,8 +904,7 @@
                             <li>Junior Web Developer (Average salary: $55,000)</li>
                         </ul>
                         
-                        <h3>Certifications</h3>
-                        <p>Students can earn CompTIA A+ and Microsoft Technology Associate certifications.</p>
+                      
                         
                         <a href="#" class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back to Programs</a>
                     </div>
@@ -1345,16 +914,16 @@
                     <h2 class="gallery-title">Our Computer Lab</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="images/computer-lab1.jpg" alt="Students working in computer lab">
+                            <img src="images/Computer%20Technolgy%20-%20Made%20with%20PosterMyWall.jpg" alt="Students working in computer lab">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/computer-lab2.jpg" alt="Hardware training session">
+                            <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Hardware training session">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/computer-lab3.jpg" alt="Coding workshop">
+                            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Coding workshop">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/computer-lab4.jpg" alt="Networking equipment">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Networking equipment">
                         </div>
                     </div>
                 </div>
@@ -1388,8 +957,8 @@
                             <li>Salon business management</li>
                         </ul>
                         
-                        <h3>Program Duration</h3>
-                        <p>9 months (6 months classroom training + 3 months salon internship)</p>
+                    
+                        
                     </div>
                     
                     <div class="detail-card cosmetology-card fade-in delay-1">
@@ -1404,9 +973,7 @@
                             <li>Esthetician (Average salary: $38,000)</li>
                             <li>Salon Owner/Manager (Average salary: $45,000-$80,000)</li>
                         </ul>
-                        
-                        <h3>Certifications</h3>
-                        <p>Graduates receive a Cosmetology License upon passing the state board exam.</p>
+                     
                         
                         <a href="#" class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back to Programs</a>
                     </div>
@@ -1416,16 +983,16 @@
                     <h2 class="gallery-title">Our Cosmetology Studio</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="images/cosmetology1.jpg" alt="Hair styling session">
+                            <img src="images/ian.PNG" alt="Hair styling session">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/cosmetology2.jpg" alt="Makeup application">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Makeup application">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/cosmetology3.jpg" alt="Nail art workshop">
+                            <img src="images/Capture.PNG" alt="Nail art workshop">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/cosmetology4.jpg" alt="Skincare training">
+                            <img src="images/cos.PNG" alt="Skincare training">
                         </div>
                     </div>
                 </div>
@@ -1459,8 +1026,8 @@
                             <li>Diagnostic equipment and troubleshooting</li>
                         </ul>
                         
-                        <h3>Program Duration</h3>
-                        <p>12 months (8 months classroom training + 4 months internship)</p>
+                        
+                    
                     </div>
                     
                     <div class="detail-card auto-card fade-in delay-1">
@@ -1476,8 +1043,7 @@
                             <li>Service Manager (Average salary: $60,000)</li>
                         </ul>
                         
-                        <h3>Certifications</h3>
-                        <p>Students can earn ASE (Automotive Service Excellence) certifications.</p>
+                     
                         
                         <a href="#" class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back to Programs</a>
                     </div>
@@ -1487,16 +1053,16 @@
                     <h2 class="gallery-title">Our Auto Shop</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="images/auto1.jpg" alt="Engine repair training">
+                            <img src="images/paul.jpg" alt="Engine repair training">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/auto2.jpg" alt="Diagnostic equipment">
+                                                        <img src="images/m.jpg" alt="Diagnostic equipment">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/auto3.jpg" alt="Brake system workshop">
+                            <img src="images/pau.jpg" alt="Brake system workshop">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/auto4.jpg" alt="Electrical systems training">
+                            <img src="images/car-tyre-on-the-asphalt-road-created-with-generative-ai-photo.jpg" alt="Electrical systems training">
                         </div>
                     </div>
                 </div>
@@ -1531,8 +1097,7 @@
                             <li>Welding safety and OSHA standards</li>
                         </ul>
                         
-                        <h3>Program Duration</h3>
-                        <p>10 months (7 months classroom training + 3 months internship)</p>
+                    
                     </div>
                     
                     <div class="detail-card welding-card fade-in delay-1">
@@ -1548,8 +1113,7 @@
                             <li>Welding Inspector (Average salary: $65,000)</li>
                         </ul>
                         
-                        <h3>Certifications</h3>
-                        <p>Students can earn AWS (American Welding Society) certifications.</p>
+                     
                         
                         <a href="#" class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i> Back to Programs</a>
                     </div>
@@ -1559,16 +1123,16 @@
                     <h2 class="gallery-title">Our Welding Workshop</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="images/welding1.jpg" alt="Welding demonstration">
+                            <img src="images/7.PNG" alt="Welding demonstration">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/welding2.jpg" alt="Metal fabrication">
+                            <img src="images/5.jpg" alt="Metal fabrication">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/welding3.jpg" alt="Welding safety training">
+                            <img src="images/6.jpg" alt="Welding safety training">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/welding4.jpg" alt="Blueprint reading">
+                            <img src="images/4.jpg" alt="Blueprint reading">
                         </div>
                     </div>
                 </div>
@@ -1603,8 +1167,7 @@
                             <li>Customer service in food industry</li>
                         </ul>
                         
-                        <h3>Program Duration</h3>
-                        <p>9 months (6 months classroom training + 3 months internship)</p>
+                      
                     </div>
                     
                     <div class="detail-card catering-card fade-in delay-1">
@@ -1631,16 +1194,16 @@
                     <h2 class="gallery-title">Our Kitchen Facilities</h2>
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="images/catering1.jpg" alt="Cooking class">
+                            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Cooking class">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/catering2.jpg" alt="Food presentation">
+                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Food presentation">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/catering3.jpg" alt="Baking workshop">
+                            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Baking workshop">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/catering4.jpg" alt="Catering event">
+                            <img src="images/david.PNG" alt="Catering event">
                         </div>
                     </div>
                 </div>
@@ -1667,13 +1230,11 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#" onclick="showPage('home')">Home</a></li>
-                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
                         <li><a href="#" onclick="showPage('computer')">Computer Technology</a></li>
                         <li><a href="#" onclick="showPage('cosmetology')">Cosmetology</a></li>
                         <li><a href="#" onclick="showPage('auto')">Auto Mechanics</a></li>
                         <li><a href="#" onclick="showPage('welding')">Welding</a></li>
                         <li><a href="#" onclick="showPage('catering')">Catering</a></li>
-                        <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
                     </ul>
                 </div>
                 
